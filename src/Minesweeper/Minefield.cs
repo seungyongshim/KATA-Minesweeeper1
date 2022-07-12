@@ -10,15 +10,9 @@ public class Minefield
         Height = height;
 
 
-        Cells = new Cell[width * height];
-
-        for (int j = 0; j < height; j++)
-        {
-            for (int i = 0; i < width; i++)
-            {
-                Cells[i + j * Width] = new ();
-            }
-        }
+        Cells = Enumerable.Range(0, width * height)
+                          .Select(i => new Cell())
+                          .ToArray();
     }
 
     public int Height { get; }

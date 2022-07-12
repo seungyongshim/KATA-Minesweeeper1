@@ -13,19 +13,12 @@ public class Cell
 
     public override string ToString()
     {
-        if (IsCovered)
+        return (IsCovered, IsBomb) switch
         {
-            return ".";
-        }
-
-        if (IsBomb)
-        {
-            return "*";
-        }
-        else
-        {
-            return Number.ToString();
-        }
+            (true, _) => ".",
+            (false, true) => "*",
+            (false, false) => Number.ToString(),
+        };
     }
 
     public void AddNumber()

@@ -21,4 +21,13 @@ public class CellSpec
 
         Assert.Equal("3", sut.ToString());
     }
+
+    [Fact]
+    public void Covered()
+    {
+        var sut = new Cell();
+
+        Assert.Equal(".", $"{sut}");
+    }
+
 }

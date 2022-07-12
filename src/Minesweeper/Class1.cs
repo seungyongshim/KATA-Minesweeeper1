@@ -2,6 +2,7 @@ namespace Minesweeper;
 
 public class Cell
 {
+    public bool IsCovered { get; } = true;
 
     public void SetBomb()
     {
@@ -12,6 +13,11 @@ public class Cell
 
     public override string ToString()
     {
+        if (IsCovered)
+        {
+            return ".";
+        }
+
         if (IsBomb)
         {
             return "*";

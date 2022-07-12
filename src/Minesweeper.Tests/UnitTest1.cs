@@ -6,8 +6,8 @@ public class CellSpec
     public void IsBomb()
     {
         var sut = new Cell();
-        var ret = sut.SetBomb();
+        sut.SetBomb();
 
-        Assert.Equal("*", ret.ToString());
+        Assert.Equal("*", sut.ToString());
     }
 }

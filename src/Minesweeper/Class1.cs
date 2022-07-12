@@ -16,8 +16,10 @@ public class Cell
         {
             return "*";
         }
-
-        return "";
+        else
+        {
+            return Number.ToString();
+        }
     }
 
     public void AddNumber()

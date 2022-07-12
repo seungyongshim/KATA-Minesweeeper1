@@ -2,7 +2,7 @@ namespace Minesweeper;
 
 public class Cell
 {
-    public bool IsCovered { get; } = true;
+    public bool IsCovered { get; set; } = true;
 
     public void SetBomb()
     {
@@ -33,5 +33,22 @@ public class Cell
         Number++;
     }
 
-    public int Number { get; set; }
+    private int m_number;
+
+    public int Number
+    {
+        get
+        {
+            return m_number;
+        }
+        set
+        {
+            m_number = value;
+        }
+    }
+
+    public void Click()
+    {
+        IsCovered = false;
+    }
 }

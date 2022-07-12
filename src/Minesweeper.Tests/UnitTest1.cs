@@ -6,7 +6,10 @@ public class CellSpec
     public void IsBomb()
     {
         var sut = new Cell();
+        
         sut.SetBomb();
+
+        sut.Click();
 
         Assert.Equal("*", sut.ToString());
     }
@@ -18,6 +21,8 @@ public class CellSpec
         sut.AddNumber();
         sut.AddNumber();
         sut.AddNumber();
+
+        sut.Click();
 
         Assert.Equal("3", sut.ToString());
     }

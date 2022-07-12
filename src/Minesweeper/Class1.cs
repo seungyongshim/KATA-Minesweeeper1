@@ -19,4 +19,11 @@ public class Cell
 
         return "";
     }
+
+    public void AddNumber()
+    {
+        Number++;
+    }
+
+    public int Number { get; set; }
 }

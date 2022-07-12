@@ -10,4 +10,15 @@ public class CellSpec
 
         Assert.Equal("*", sut.ToString());
     }
+
+    [Fact]
+    public void Number()
+    {
+        var sut = new Cell();
+        sut.AddNumber();
+        sut.AddNumber();
+        sut.AddNumber();
+
+        Assert.Equal("3", sut.ToString());
+    }
 }
